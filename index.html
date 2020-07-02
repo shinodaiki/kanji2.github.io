@@ -77,12 +77,12 @@ if ('serviceWorker' in navigator) {
 </head>
 <body>
     <div class="part1">
-        <input type="text" id="textbox1" onfocus="this.select();" value="" placeholder="漢字を入力">
-        <input type="button" onclick="kanjif()" id="button2" value="決定">
+        <input type="text" id="textbox1" onfocus="this.select();" value="" placeholder="漢字を入力" onkeypress="kanjif()"/>
+        <input type="button" onclick="kanjif()" id="button2" value="決定"/>
     </div>
     <div class="part2">
         <div id= result></div>
-        <input type="button" onclick="clear1()" id="button1" value="リセット">
+        <input type="button" onclick="clear1()" id="button1" value="リセット"/>
     </div>
 </body>
 </html>
