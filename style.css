@@ -1,4 +1,9 @@
 /**/
+input#button1, input#button2 {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
 body {
     margin-top: 45vh;
     text-align: center;
