@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
-    <script src="service_worker.js"></script>
     <link rel="stylesheet" href="./style.css">
     <script>
         const itinen = "一右雨円王音下火花貝学気九休玉金空月犬見五口校左三山子四糸字耳七車手十出女小上森人水正生青夕石赤千川先早草足村大男竹中虫町天田土二日入年白八百文木本名目立力林六"
@@ -62,7 +61,7 @@ if (itinen.indexOf(kanji) != -1) {
 <!-- ServiceWorkerの登録 -->
 <script>
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js')
+    navigator.serviceWorker.register('service_worker.js')
       .then((reg) => {
         console.log('Service worker registered.', reg);
       });
