@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
     <link rel="stylesheet" href="style.css">
+    <!-- ウェブアプリマニフェストの読み込み -->
+    <link rel="manifest" href="manifest.json">
     <script>
         const itinen = "一右雨円王音下火花貝学気九休玉金空月犬見五口校左三山子四糸字耳七車手十出女小上森人水正生青夕石赤千川先早草足村大男竹中虫町天田土二日入年白八百文木本名目立力林六"
         const ninen  = "引羽雲園遠何科夏家歌画回会海絵外角楽活間丸岩顔汽記帰弓牛魚京強教近兄形計元言原戸古午後語工公広交光考行高黄合谷国黒今才細作算止市矢姉思紙寺自時室社弱首秋週春書少場色食心新親図数西声星晴切雪船線前組走多太体台地池知茶昼長鳥朝直通弟店点電刀冬当東答頭同道読内南肉馬売買麦半番父風分聞米歩母方北毎妹万明鳴毛門夜野友用曜来里理話"
@@ -19,31 +21,30 @@ function kanjif(){
 if (kanji.length != 1) {
     kanji = kanji.slice(0,1);
 }
-if (itinen.indexOf(kanji) != -1) {
     target = document.getElementById("result");
+if (itinen.indexOf(kanji) != -1) {
     target.innerHTML = "「" + kanji + "」は１年生で習います";
 } else if (ninen.indexOf(kanji) != -1) {
-    target = document.getElementById("result");
     target.innerHTML = "「"+kanji+"」は２年生で習います";
 } else if (sannen.indexOf(kanji) != -1) {
-    target = document.getElementById("result");
     target.innerHTML = "「"+kanji+"」は３年生で習います";
 } else if (yonen.indexOf(kanji) != -1) {
-    target = document.getElementById("result");
     target.innerHTML = "「"+kanji+"」は４年生で習います";
 } else if (gonen.indexOf(kanji) != -1) {
-    target = document.getElementById("result");
     target.innerHTML = "「"+kanji+"」は５年生で習います";
 } else if (rokunen.indexOf(kanji) != -1) {
-    target = document.getElementById("result");
     target.innerHTML = "「"+kanji+"」は６年生で習います";
 } else if (tyugaku.indexOf(kanji) != -1) {
-    target = document.getElementById("result");
     target.innerHTML = "「"+kanji+"」は中学生で習います"; 
 } else {
-    target = document.getElementById("result");
     target.innerHTML = "「"+kanji+"」は常用漢字ではありません";
 }
+}
+
+function clear1() {
+    document.getElementById('textbox1').value = "";
+    target = document.getElementById("result");
+    target.innerHTML = "";
 }
     </script>
 
@@ -56,18 +57,21 @@ if (itinen.indexOf(kanji) != -1) {
 <!-- ホーム画面に表示されるアプリアイコン -->
 <link rel="apple-touch-icon" href="icon.png">
 
-<!-- ウェブアプリマニフェストの読み込み -->
-<link rel="manifest" href="manifest.json">
 <!-- ServiceWorkerの登録 -->
 <script>
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('service_worker.js')
-      .then((reg) => {
-        console.log('Service worker registered.', reg);
-      });
-}
+    navigator.serviceWorker.register('serviceWorker.js')
+    .then(
+    function (registration) {
+        if (typeof registration.update == 'function') {
+            registration.update();
+        }
+    })
+    .catch(function (error) {
+        console.log("Error Log: " + error);
+    });
+    }
 
-<title>何年生の漢字</title>
 </script>
 
 </head>
@@ -78,7 +82,7 @@ if ('serviceWorker' in navigator) {
     </div>
     <div class="part2">
         <div id= result></div>
-        <input type="button" value="リセット" id="button1" onclick="window.location.reload();" />
+        <input type="button" onclick="clear1()" id="button1" value="リセット">
     </div>
 </body>
 </html>
