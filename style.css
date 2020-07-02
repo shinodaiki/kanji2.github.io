@@ -1,9 +1,4 @@
 /**/
-input#button1, input#button2 {
-    -webkit-appearance: none;
-    border-radius: 0;
-}
-
 body {
     margin-top: 45vh;
     text-align: center;
@@ -35,6 +30,7 @@ input#textbox1 {
 }
 
 input#button1 {
+    -webkit-appearance: none;
     padding: 10px 30px;
     border-style: none;
     background-color: #248;
@@ -51,6 +47,7 @@ input#button1 {
 }
 
 input#button2 {
+    -webkit-appearance: none;
     border-style:none;
     background-color: #248;
     color: white;
