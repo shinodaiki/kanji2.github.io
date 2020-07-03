@@ -6,6 +6,10 @@ body {
     font-family: sans-serif;
 }
 
+body#result {
+    font-family: sans-serif;
+}
+
 input#textbox1 {
     width: 150px;
     font-size: 1em;
