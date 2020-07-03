@@ -22,7 +22,9 @@ if (kanji.length != 1) {
     kanji = kanji.slice(0,1);
 }
     target = document.getElementById("result");
-if (itinen.indexOf(kanji) != -1) {
+if (kanji == "") {
+    return 0;
+} else if (itinen.indexOf(kanji) != -1) {
     target.innerHTML = "「" + kanji + "」は１年生で習います";
 } else if (ninen.indexOf(kanji) != -1) {
     target.innerHTML = "「"+kanji+"」は２年生で習います";
