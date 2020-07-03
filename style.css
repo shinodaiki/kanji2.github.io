@@ -12,6 +12,7 @@ body#result {
 
 input#textbox1 {
     -webkit-appearance: none;
+    height: 33px;
     width: 150px;
     font-size: 1em;
     border: 2px solid #248;
@@ -19,7 +20,7 @@ input#textbox1 {
     box-sizing: border-box;
     padding-left: 10px;
     position: relative;
-    top: 2px;
+    top: 1px;
 }
 
 #button1:focus, #button2:focus, #textbox1:focus {
@@ -53,6 +54,7 @@ input#button2 {
     border-style:none;
     background-color: #248;
     color: white;
+    font-size: 0.8em;
     font-weight: bolder;
     padding:5px 20px;
     border-radius: 5px;
