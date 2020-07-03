@@ -3,7 +3,7 @@ body {
     margin-top: 45vh;
     text-align: center;
     font-size: 1.2em;
-    font-family: "sans-serif","ヒラギノ角ゴ";
+    font-family: sans-serif;
 }
 
 input#textbox1 {
