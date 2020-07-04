@@ -1,7 +1,7 @@
 {
     "short_name": "漢字",
     "name": "何年生の漢字",
-    "display": "standalone",
+    "display": "fullscreen",
     "start_url": "index.html",
     "theme_color": "#224488",
     "background_color": "#ffffff",
