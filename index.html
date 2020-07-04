@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
+    <script src="1.js"></script>
 
 
     <meta name="theme-color" content="#ace">
@@ -20,20 +21,18 @@
     <meta name="author" content="shinodaiki">
 
     <!-- serviceworker -->
-    <script>
-    ServiceWorkerModule.register('sw.js', { enabled: environment.production, registrationStrategy: 'registerImmediately' }),
-    // if ('serviceWorker' in navigator) {
-    //     window.addEventListener('load', function() {
-    //         navigator.serviceWorker.register('/sw.js').then(function(registration) {
-    //         // Registration was successful
-    //         console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    //         }, function(err) {
-    //         // registration failed :(
-    //         console.log('ServiceWorker registration failed: ', err);
-    //         });
-    //     });
-    //     }
-    
+    <!-- <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/sw.js').then(function(registration) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+            // registration failed :(
+            console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+        } -->
         
     </script>
 
