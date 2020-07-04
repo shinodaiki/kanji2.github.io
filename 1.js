@@ -1,7 +1,5 @@
 "use strict";
 
-registSW();
-getPost();
 
 function registSW() {
 
