@@ -8,7 +8,6 @@ const urlsToCache = [
 ];
 
 // Service Worker へファイルをインストール
-
 self.addEventListener('install', function (event) {
   event.waitUntil(
     caches.open(CACHE_NAME)

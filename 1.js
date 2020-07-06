@@ -18,7 +18,7 @@ function registSW() {
 
 function getPost() {
 
-  fetch('https://qiita.com/api/v2/items')
+  fetch('https://shinodaiki.github.io/kanji2.github.io/')
     .then(response => {
       return response.json();
 
