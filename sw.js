@@ -14,18 +14,18 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox
 workbox.precaching.precacheAndRoute([
   {
     url: '/index.html',
-    revision: '12345'
+    revision: '11111'
   },
   {
     url: '/style.css',
-    revision: '12345'
+    revision: '11111'
   },
   { 
 　url: '/1.js',
-    revision: '12345'
+    revision: '11111'
   },
   { 
   url: '/2.js',
-    revision: '12345'
+    revision: '11111'
   },
 ])
