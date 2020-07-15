@@ -33,3 +33,8 @@ workbox.precaching.precacheAndRoute([
     revision: '20000'
   },
 ])
+
+
+self.addEventListener('fetch', function(event) {
+
+});
