@@ -13,15 +13,15 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox
 // ファイルのキャッシュ
 workbox.precaching.precacheAndRoute([
   {
-    url: '/index.html',
+    url: '/kanji2.github.io/index.html',
     revision: '11111'
   },
   {
-    url: '/style.css',
+    url: '/kanji2.github.io/style.css',
     revision: '11111'
   },
   { 
-　url: '/1.js',
+　url: '/kanji2.github.io/1.js',
     revision: '11111'
   },
   { 
