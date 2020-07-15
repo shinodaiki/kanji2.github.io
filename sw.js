@@ -28,4 +28,8 @@ workbox.precaching.precacheAndRoute([
   url: '/kanji2.github.io/2.js',
     revision: '11111'
   },
+  { 
+  url: '/kanji2.github.io/icon.png',
+    revision: '11111'
+  },
 ])
