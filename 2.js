@@ -8,12 +8,15 @@ const tyugaku= "亜哀挨曖握扱宛嵐依威為畏尉萎偉椅彙違維慰緯�
 
 function kanjif(){
     let kanji = document.getElementById("textbox1").value;
+    let kanji2 = kanji;
     if (kanji.length != 1) {
         kanji = kanji.slice(0,1);
     }
         target = document.getElementById("result");
     if (kanji == "") {
         return 0;
+    } else if ( kanji2 == "ぎゅ" ) {
+        target.innerHTML = "ちゅちゅちゅっ";
     } else if (itinen.indexOf(kanji) != -1) {
         target.innerHTML = "「" + kanji + "」は１年生で習います";
     } else if (ninen.indexOf(kanji) != -1) {
