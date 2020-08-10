@@ -1,10 +1,12 @@
 const NAME = 'kanji2';
-const VERSION = '002';
+const VERSION = '003';
 const CACHE_NAME = NAME + VERSION;
 const urlsToCache = [
   './index.html',
   './icon.png',
   './style.css',
+  './1.js',
+  './2.js',
 ];
 
 // ファイブラリのインポート
