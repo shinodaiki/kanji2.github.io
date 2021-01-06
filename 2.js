@@ -15,8 +15,6 @@ function kanjif(){
         target = document.getElementById("result");
     if (kanji == "") {
         return 0;
-    } else if ( kanji2 == "ぎゅ" ) {
-        target.innerHTML = "ちゅちゅちゅっ";
     } else if (itinen.indexOf(kanji) != -1) {
         target.innerHTML = "「" + kanji + "」は１年生で習います";
     } else if (ninen.indexOf(kanji) != -1) {
